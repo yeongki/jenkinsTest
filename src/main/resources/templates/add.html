@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="EUC-KR">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<title>Insert title here</title>
+</head>
+<body>
+<h1>add</h1>
+<form id='frm'>
+	<input type="text" id="id" name="id"></input>
+	<input type="text" id="summary" name="summary"></input>
+	<button type="submit" id="add-button" name="add-button">add</button>
+</form>
+<span id="result-summary">11111</span>
+</body>
+<script>
+$('#frm').submit(function(e) {
+	e.preventDefault();
+	$.ajax({
+		type: "post",
+		dataType : "json",
+		url: "/api/todo",
+		data: $("#frm").serialize(),
+		success:function(data){
+			console.log(data);
+			$('#result-summary').text(data.summary);
+		}
+	});
+});
+</script>
+</html>
+
