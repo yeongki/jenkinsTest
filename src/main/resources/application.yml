@@ -1,0 +1,6 @@
+server:
+  port: 8080
+  
+custom:
+  value: test
+  valueTwo: test2
