@@ -44,7 +44,7 @@ dependencies {
 
 jar {
     baseName = 'spring-boot-study-unit-test'
-    version =  '2.0.1.RELEASE'
+    version =  '0.0.1-SNAPSHOT'
 }
 
 docker {
